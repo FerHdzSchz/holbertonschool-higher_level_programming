@@ -3,4 +3,4 @@ for i in range(0,100):
     if i != 99:
         print(f"{i:2.d}", end ="")
     else:
-        print(f"i", end="")
+        print(f"i")
