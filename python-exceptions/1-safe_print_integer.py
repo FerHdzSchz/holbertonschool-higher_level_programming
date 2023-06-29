@@ -4,7 +4,7 @@ def safe_print_integer(value):
     try:
         print("{:d}".format(value))
         output = True
-    except Exception e:
+    except (TypeError, NameError) as e:
         pass
 
     return output
