@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """ Square class with error handling"""
+
+
 class Square:
     """Base class + private attribute + type checker"""
 
