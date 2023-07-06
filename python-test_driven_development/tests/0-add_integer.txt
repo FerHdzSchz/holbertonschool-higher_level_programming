@@ -66,3 +66,7 @@ TypeError: a must be an integer
 >>> add_integer(8, 1e600)
 Traceback (most recent call last):
 OverflowError: cannot convert float infinity to integer
+
+>>> add_integer(1e600, -6)
+Traceback (most recent call last):
+OverflowError: cannot convert float infinity to integer
