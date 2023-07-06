@@ -23,6 +23,13 @@ Import libraries
 >>> add_integer(1.0, 5.0)
 6
 
+>>> add_integer(1.0, 5)
+6
+
+>>> add_integer(1, 5.0)
+6
+
+
 >>> add_integer(a, 1)
 Traceback (most recent call last):
 NameError: name 'a' is not defined
