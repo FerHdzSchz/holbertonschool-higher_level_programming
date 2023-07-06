@@ -5,8 +5,6 @@ Using add_integer function
 Adding tests for
 ``add_integer()``.
 
-Numbers
-=======
 
 ``add_integer()`` returns the sum of its arguments.
 a and b must be integers or floats,
