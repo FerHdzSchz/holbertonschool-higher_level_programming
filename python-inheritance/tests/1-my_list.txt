@@ -65,4 +65,3 @@ Using only a list
 >>> alist.print_sorted()
 Traceback (most recent call last):
 AttributeError: 'list' object has no attribute 'print_sorted'
->>>
