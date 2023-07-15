@@ -1,0 +1,51 @@
+================
+List Inheritance
+================
+
+Import class
+============
+>>> MyList = __import__('1-my-list'). MyList
+
+Normal Cases
+============
+
+>>> ml = MyList()
+>>> ml.print_sorted()
+[]
+
+>>> ml.append(1)
+>>> ml.print_sorted()
+[1]
+
+>>> ml.append(1)
+>>> ml.append(4)
+>>> ml.append(2)
+>>> ml.append(3)
+>>> ml.append(5)
+>>> print(ml)
+[1, 1, 4, 2, 3, 5]
+
+>>> ml.print_sorted()
+[1, 1, 2, 3, 4, 5]
+
+>>> print(ml)
+[1, 1, 4, 2, 3, 5]
+
+>>> ml.append(1.2)
+>>> ml.print_sorted()
+[1, 1, 1.2, 2, 3, 4, 5]
+
+Inserting mixed types str and int in list
+=========================================
+
+>>> ml.append("a")
+>>> ml.print_sorted()
+Traceback (most recent call last):
+TypeError: '<' not supported between instances of 'str' and 'int'
+
+Using a not defined object
+==========================
+
+>>> ml2.print_sorted()
+Traceback (most recent call last):
+NameError: name 'ml2' is not defined
