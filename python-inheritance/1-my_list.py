@@ -13,4 +13,5 @@ class MyList(list):
         """
         return sorted list
         """
-        return sorted(self)
+        sorted_l = sorted(my_list)
+        return sorted_l
