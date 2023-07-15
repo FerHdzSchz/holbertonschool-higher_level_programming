@@ -3,11 +3,11 @@ List Inheritance
 ================
 
 Import class
-============
+------------
 >>> MyList = __import__('1-my-list'). MyList
 
 Normal Cases
-============
+------------
 
 >>> ml = MyList()
 >>> ml.print_sorted()
@@ -36,7 +36,7 @@ Normal Cases
 [1, 1, 1.2, 2, 3, 4, 5]
 
 Inserting mixed types str and int in list
-=========================================
+-----------------------------------------
 
 >>> ml.append("a")
 >>> ml.print_sorted()
@@ -44,7 +44,7 @@ Traceback (most recent call last):
 TypeError: '<' not supported between instances of 'str' and 'int'
 
 Using a not defined object
-==========================
+--------------------------
 
 >>> ml2.print_sorted()
 Traceback (most recent call last):
