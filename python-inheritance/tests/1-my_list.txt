@@ -49,3 +49,11 @@ Using a not defined object
 >>> ml2.print_sorted()
 Traceback (most recent call last):
 NameError: name 'ml2' is not defined
+
+Using only a list
+---------------------------
+>>> alist = [1, 2, 3]
+>>> alist.print_sorted()
+Traceback (most recent call last):
+AttributeError: 'list' object has no attribute 'print_sorted'
+>>>
