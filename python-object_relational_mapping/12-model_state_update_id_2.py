@@ -1,35 +1,27 @@
 #!/usr/bin/python3
 """
-Script that changes the name of a `State`
-object from the database `hbtn_0e_6_usa`.
-
-Arguments:
-    mysql username (str)
-    mysql password (str)
-    database name (str)
+This script changes the name of a State object
+from the database `hbtn_0e_6_usa`.
 """
 
-import sys
-from sqlalchemy import (create_engine)
-from sqlalchemy.orm import Session
-from sqlalchemy.engine.url import URL
+from sys import argv
 from model_state import Base, State
-
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
 
 if __name__ == "__main__":
-    mySQL_u = sys.argv[1]
-    mySQL_p = sys.argv[2]
-    db_name = sys.argv[3]
+    """
+    Updates a State object on the database.
+    """
 
-    url = {'drivername': 'mysql+mysqldb', 'host': 'localhost',
-           'username': mySQL_u, 'password': mySQL_p, 'database': db_name}
+    db_uri = 'mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
+        argv[1], argv[2], argv[3])
+    engine = create_engine(db_uri)
+    Session = sessionmaker(bind=engine)
 
-    engine = create_engine(URL(**url), pool_pre_ping=True)
-    Base.metadata.create_all(engine)
+    session = Session()
 
-    session = Session(bind=engine)
-
-    q = session.query(State).filter(State.id == 2)
-    q.update({State.name: "New Mexico"})
-
+    ari_state = session.query(State).filter(State.id == '2').first()
+    ari_state.name = 'New Mexico'
     session.commit()
+    session.close()
